@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     if (isMoving) {
-      setTimeout(() => setIsMoving(false), 3000); // Stop moving after 3 seconds
+      setTimeout(() => setIsMoving(false), 3000);
     }
   }, [isMoving]);
 
