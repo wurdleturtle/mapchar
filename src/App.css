@@ -11,11 +11,11 @@ root {
   border-radius: 50%;
   width: 5%;
   position: absolute;
-  transition: ease-in-out 3s;
+  transition: ease-in-out 5s;
 }
 
 .moving {
-  animation: rotateShake 0.75s infinite;
+  animation: rotateShake 1.25s infinite;
 }
 
 @keyframes rotateShake {

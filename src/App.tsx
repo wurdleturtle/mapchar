@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     if (isMoving) {
-      setTimeout(() => setIsMoving(false), 3000);
+      setTimeout(() => setIsMoving(false), 5000);
     }
   }, [isMoving]);
 
