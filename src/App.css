@@ -15,25 +15,26 @@ root {
 }
 
 .moving {
-  animation: rotateShake 0.75s ease-in-out infinite;
+  animation: rotateShake 0.75s infinite;
 }
 
 @keyframes rotateShake {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1);
   }
   25% {
-    transform: rotate(10deg);
+    transform: rotate(10deg) scale(1.0005);
   }
   50% {
-    transform: rotate(-10deg);
+    transform: rotate(-10deg) scale(1.005);
   }
   75% {
-    transform: rotate(10deg);
+    transform: rotate(10deg) scale(1.0005);
   }
-  100% {
-    transform: rotate(0deg);
-  }
+}
+
+.rotate-shake-scale {
+  animation: rotateShakeScale 0.6s ease-in-out infinite;
 }
 
 .input {
