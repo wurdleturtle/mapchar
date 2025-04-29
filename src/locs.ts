@@ -1,2 +1,2 @@
-export const locsx = [450, 500, 180, 310, 100];
-export const locsy = [520, 950, 875, 670, 470];
+export const locsx = [23, 87, 79, 60, 42];
+export const locsy = [36, 45, 17, 28, 8];

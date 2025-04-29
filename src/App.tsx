@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import "./App.css";
-import Map from "./components/Map";
-import { locsx, locsy } from "./locs";
+import { useState, useEffect } from 'react';
+import './App.css';
+import Map from './components/Map';
+import { locsx, locsy } from './locs';
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState<number>(4);
@@ -9,7 +9,7 @@ function App() {
 
   const handleKeyPress = (event: KeyboardEvent) => {
     const key = event.key;
-    if (key >= "1" && key <= "5") {
+    if (key >= '1' && key <= '5') {
       const index = parseInt(key) - 1;
       setIsMoving(true);
       setCurrentIndex(index);
@@ -17,9 +17,9 @@ function App() {
   };
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener('keydown', handleKeyPress);
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener('keydown', handleKeyPress);
     };
   }, []);
 
@@ -31,7 +31,18 @@ function App() {
 
   return (
     <>
-      <Map />
+      <div>
+        <Map />
+        <img
+          src="https://images.wurdle.eu/wurdleturtle.png"
+          className={`char ${isMoving ? 'moving' : ''}`}
+          style={{
+            top: `${locsy[currentIndex]}vw`,
+            left: `${locsx[currentIndex]}vw`,
+            position: 'absolute',
+          }}
+        />
+      </div>
       <h1>New Landia Map</h1>
       <p>
         Key: <br />
@@ -41,15 +52,6 @@ function App() {
         4 = Marsh of Mushiness <br />
         5 = Mountain of Steepness <br />
       </p>
-      <img
-        src="https://images.wurdle.eu/wurdleturtle.png"
-        className={`char ${isMoving ? "moving" : ""}`}
-        style={{
-          top: `${locsx[currentIndex]}px`,
-          left: `${locsy[currentIndex]}px`,
-          position: "absolute",
-        }}
-      />
     </>
   );
 }
