@@ -34,7 +34,7 @@ function App() {
       <div>
         <Map />
         <img
-          src="https://images.wurdle.eu/wurdleturtle.png"
+          src="https://images.wurdle.eu/barnstick.png"
           className={`char ${isMoving ? 'moving' : ''}`}
           style={{
             top: `${locsy[currentIndex]}vw`,
@@ -51,6 +51,11 @@ function App() {
         3 = River of Wetness <br />
         4 = Marsh of Mushiness <br />
         5 = Mountain of Steepness <br />
+      </p>
+      <br />
+      <p>
+        {' '}
+        Created by <a href="https://wurdle.eu">me</a>
       </p>
     </>
   );
